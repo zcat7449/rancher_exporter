@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: url.local
+  namespace: prometheus
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: url.local
+      http:
+        paths:
+          - path: /metrics
+            pathType: Prefix
+            backend:
+              service:
+                name: prometheus-rancher-exporter-service
+                port:
+                  number: 8003
