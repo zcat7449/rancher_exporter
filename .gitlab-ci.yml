@@ -29,5 +29,5 @@ deploy-local:
     - kubectl apply -f k8s/deployment.yaml -n prometheus
     - kubectl apply -f k8s/service.yaml -n prometheus
     - kubectl apply -f k8s/ingress.yaml -n prometheus
-    - kubectl set image deployment/prometheus-rancher-exporter-deployment -n=prometheus prometheus-rancher-exporter=git.mos.ru:5050/datacenter/cod-linux/rancher_exporter:${CI_PIPELINE_ID}
+    - kubectl set image deployment/prometheus-rancher-exporter-deployment -n=prometheus prometheus-rancher-exporter=url:5050/datacenter/cod-linux/rancher_exporter:${CI_PIPELINE_ID}
     - kubectl rollout restart deployment/prometheus-rancher-exporter-deployment -n prometheus
