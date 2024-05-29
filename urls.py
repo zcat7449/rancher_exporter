@@ -1,0 +1,5 @@
+URL_CLUSTER = "https://rancher.url/v1/management.cattle.io.clusters/"
+URL_PROJECT = "https://rancher.url/v1/management.cattle.io.projects/"
+URL_NAMESPACES = "https://rancher.url/v3/cluster/"
+URL_LIMITS = "https://rancher.url/v3/projects/"
+URL_CLUSTERS = "https://rancher.url/v3/clusters/"
